@@ -1,0 +1,36 @@
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/cli", "crates/gui"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.96"
+license = "MIT"
+repository = "https://github.com/jackhale/major_mnemonic"
+
+[workspace.dependencies]
+# Core (pure, FFI-safe) deps
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+# CLI-only deps
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+
+# GUI-only deps (lightweight native immediate-mode UI; no web stack)
+eframe = "0.29"
+
+# Training-mode RNG (front ends only; core stays RNG-free)
+rand = "0.8"
+
+# Dev / test deps
+proptest = "1"
+insta = { version = "1", features = ["json"] }
+assert_cmd = "2"
+predicates = "3"
+
+# Internal crates. The `version` is required so the path dependency resolves to
+# the published crate when packaging for crates.io.
+major_mnemonic_core = { path = "crates/core", version = "0.1.0" }

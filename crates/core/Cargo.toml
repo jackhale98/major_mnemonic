@@ -1,0 +1,19 @@
+[package]
+name = "major_mnemonic_core"
+description = "Reversible Mnemonic Major System encode/decode core (no UI/CLI deps)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords = ["mnemonic", "major-system", "memory", "encode", "decode"]
+categories = ["encoding", "text-processing"]
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+proptest = { workspace = true }
+insta = { workspace = true }

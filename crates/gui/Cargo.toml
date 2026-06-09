@@ -1,0 +1,17 @@
+[package]
+name = "mnemonic-gui"
+description = "Lightweight native desktop GUI for the Mnemonic Major System."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "mnemonic-gui"
+path = "src/main.rs"
+
+[dependencies]
+major_mnemonic_core = { workspace = true }
+eframe = { workspace = true }
+rand = { workspace = true }

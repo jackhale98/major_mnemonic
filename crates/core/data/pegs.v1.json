@@ -1,0 +1,2318 @@
+{
+  "schema_version": 1,
+  "source": "Authoritative pegs from the Mnemonic Major System (Wikipedia), incl. single-digit pegs. Normalized to single ASCII tokens. phonetic_exception marks words whose spelling diverges from the heuristic encoder (silent letters, tch, soft/hard g).",
+  "pairs": {
+    "verb": [
+      {
+        "word": "assess",
+        "digits": [
+          0,
+          0
+        ]
+      },
+      {
+        "word": "swat",
+        "digits": [
+          0,
+          1
+        ]
+      },
+      {
+        "word": "assign",
+        "digits": [
+          0,
+          2
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "assume",
+        "digits": [
+          0,
+          3
+        ]
+      },
+      {
+        "word": "sorrow",
+        "digits": [
+          0,
+          4
+        ]
+      },
+      {
+        "word": "sell",
+        "digits": [
+          0,
+          5
+        ]
+      },
+      {
+        "word": "switch",
+        "digits": [
+          0,
+          6
+        ]
+      },
+      {
+        "word": "soak",
+        "digits": [
+          0,
+          7
+        ]
+      },
+      {
+        "word": "save",
+        "digits": [
+          0,
+          8
+        ]
+      },
+      {
+        "word": "sob",
+        "digits": [
+          0,
+          9
+        ]
+      },
+      {
+        "word": "tease",
+        "digits": [
+          1,
+          0
+        ]
+      },
+      {
+        "word": "edit",
+        "digits": [
+          1,
+          1
+        ]
+      },
+      {
+        "word": "widen",
+        "digits": [
+          1,
+          2
+        ]
+      },
+      {
+        "word": "time",
+        "digits": [
+          1,
+          3
+        ]
+      },
+      {
+        "word": "draw",
+        "digits": [
+          1,
+          4
+        ]
+      },
+      {
+        "word": "tell",
+        "digits": [
+          1,
+          5
+        ]
+      },
+      {
+        "word": "teach",
+        "digits": [
+          1,
+          6
+        ]
+      },
+      {
+        "word": "take",
+        "digits": [
+          1,
+          7
+        ]
+      },
+      {
+        "word": "defy",
+        "digits": [
+          1,
+          8
+        ]
+      },
+      {
+        "word": "type",
+        "digits": [
+          1,
+          9
+        ]
+      },
+      {
+        "word": "ionize",
+        "digits": [
+          2,
+          0
+        ]
+      },
+      {
+        "word": "unite",
+        "digits": [
+          2,
+          1
+        ]
+      },
+      {
+        "word": "nanny",
+        "digits": [
+          2,
+          2
+        ]
+      },
+      {
+        "word": "name",
+        "digits": [
+          2,
+          3
+        ]
+      },
+      {
+        "word": "honour",
+        "digits": [
+          2,
+          4
+        ]
+      },
+      {
+        "word": "inhale",
+        "digits": [
+          2,
+          5
+        ]
+      },
+      {
+        "word": "enjoy",
+        "digits": [
+          2,
+          6
+        ]
+      },
+      {
+        "word": "knock",
+        "digits": [
+          2,
+          7
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "envy",
+        "digits": [
+          2,
+          8
+        ]
+      },
+      {
+        "word": "nab",
+        "digits": [
+          2,
+          9
+        ]
+      },
+      {
+        "word": "amuse",
+        "digits": [
+          3,
+          0
+        ]
+      },
+      {
+        "word": "meet",
+        "digits": [
+          3,
+          1
+        ]
+      },
+      {
+        "word": "mine",
+        "digits": [
+          3,
+          2
+        ]
+      },
+      {
+        "word": "mime",
+        "digits": [
+          3,
+          3
+        ]
+      },
+      {
+        "word": "marry",
+        "digits": [
+          3,
+          4
+        ]
+      },
+      {
+        "word": "mail",
+        "digits": [
+          3,
+          5
+        ]
+      },
+      {
+        "word": "mash",
+        "digits": [
+          3,
+          6
+        ]
+      },
+      {
+        "word": "mock",
+        "digits": [
+          3,
+          7
+        ]
+      },
+      {
+        "word": "move",
+        "digits": [
+          3,
+          8
+        ]
+      },
+      {
+        "word": "mop",
+        "digits": [
+          3,
+          9
+        ]
+      },
+      {
+        "word": "erase",
+        "digits": [
+          4,
+          0
+        ]
+      },
+      {
+        "word": "read",
+        "digits": [
+          4,
+          1
+        ]
+      },
+      {
+        "word": "ruin",
+        "digits": [
+          4,
+          2
+        ]
+      },
+      {
+        "word": "ram",
+        "digits": [
+          4,
+          3
+        ]
+      },
+      {
+        "word": "rear",
+        "digits": [
+          4,
+          4
+        ]
+      },
+      {
+        "word": "rule",
+        "digits": [
+          4,
+          5
+        ]
+      },
+      {
+        "word": "reach",
+        "digits": [
+          4,
+          6
+        ]
+      },
+      {
+        "word": "rake",
+        "digits": [
+          4,
+          7
+        ]
+      },
+      {
+        "word": "arrive",
+        "digits": [
+          4,
+          8
+        ]
+      },
+      {
+        "word": "wrap",
+        "digits": [
+          4,
+          9
+        ]
+      },
+      {
+        "word": "lose",
+        "digits": [
+          5,
+          0
+        ]
+      },
+      {
+        "word": "let",
+        "digits": [
+          5,
+          1
+        ]
+      },
+      {
+        "word": "align",
+        "digits": [
+          5,
+          2
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "loom",
+        "digits": [
+          5,
+          3
+        ]
+      },
+      {
+        "word": "lure",
+        "digits": [
+          5,
+          4
+        ]
+      },
+      {
+        "word": "lull",
+        "digits": [
+          5,
+          5
+        ]
+      },
+      {
+        "word": "latch",
+        "digits": [
+          5,
+          6
+        ]
+      },
+      {
+        "word": "lick",
+        "digits": [
+          5,
+          7
+        ]
+      },
+      {
+        "word": "love",
+        "digits": [
+          5,
+          8
+        ]
+      },
+      {
+        "word": "help",
+        "digits": [
+          5,
+          9
+        ]
+      },
+      {
+        "word": "chase",
+        "digits": [
+          6,
+          0
+        ]
+      },
+      {
+        "word": "cheat",
+        "digits": [
+          6,
+          1
+        ]
+      },
+      {
+        "word": "chain",
+        "digits": [
+          6,
+          2
+        ]
+      },
+      {
+        "word": "jam",
+        "digits": [
+          6,
+          3
+        ]
+      },
+      {
+        "word": "jury",
+        "digits": [
+          6,
+          4
+        ]
+      },
+      {
+        "word": "chill",
+        "digits": [
+          6,
+          5
+        ]
+      },
+      {
+        "word": "judge",
+        "digits": [
+          6,
+          6
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "check",
+        "digits": [
+          6,
+          7
+        ]
+      },
+      {
+        "word": "achieve",
+        "digits": [
+          6,
+          8
+        ]
+      },
+      {
+        "word": "chop",
+        "digits": [
+          6,
+          9
+        ]
+      },
+      {
+        "word": "kiss",
+        "digits": [
+          7,
+          0
+        ]
+      },
+      {
+        "word": "quote",
+        "digits": [
+          7,
+          1
+        ]
+      },
+      {
+        "word": "weaken",
+        "digits": [
+          7,
+          2
+        ]
+      },
+      {
+        "word": "comb",
+        "digits": [
+          7,
+          3
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "carry",
+        "digits": [
+          7,
+          4
+        ]
+      },
+      {
+        "word": "kill",
+        "digits": [
+          7,
+          5
+        ]
+      },
+      {
+        "word": "coach",
+        "digits": [
+          7,
+          6
+        ]
+      },
+      {
+        "word": "cook",
+        "digits": [
+          7,
+          7
+        ]
+      },
+      {
+        "word": "give",
+        "digits": [
+          7,
+          8
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "copy",
+        "digits": [
+          7,
+          9
+        ]
+      },
+      {
+        "word": "fuse",
+        "digits": [
+          8,
+          0
+        ]
+      },
+      {
+        "word": "fight",
+        "digits": [
+          8,
+          1
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "fine",
+        "digits": [
+          8,
+          2
+        ]
+      },
+      {
+        "word": "fume",
+        "digits": [
+          8,
+          3
+        ]
+      },
+      {
+        "word": "fry",
+        "digits": [
+          8,
+          4
+        ]
+      },
+      {
+        "word": "fly",
+        "digits": [
+          8,
+          5
+        ]
+      },
+      {
+        "word": "fetch",
+        "digits": [
+          8,
+          6
+        ]
+      },
+      {
+        "word": "fake",
+        "digits": [
+          8,
+          7
+        ]
+      },
+      {
+        "word": "viva",
+        "digits": [
+          8,
+          8
+        ]
+      },
+      {
+        "word": "fob",
+        "digits": [
+          8,
+          9
+        ]
+      },
+      {
+        "word": "oppose",
+        "digits": [
+          9,
+          0
+        ]
+      },
+      {
+        "word": "bite",
+        "digits": [
+          9,
+          1
+        ]
+      },
+      {
+        "word": "ban",
+        "digits": [
+          9,
+          2
+        ]
+      },
+      {
+        "word": "bomb",
+        "digits": [
+          9,
+          3
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "bury",
+        "digits": [
+          9,
+          4
+        ]
+      },
+      {
+        "word": "peel",
+        "digits": [
+          9,
+          5
+        ]
+      },
+      {
+        "word": "patch",
+        "digits": [
+          9,
+          6
+        ]
+      },
+      {
+        "word": "poke",
+        "digits": [
+          9,
+          7
+        ]
+      },
+      {
+        "word": "pave",
+        "digits": [
+          9,
+          8
+        ]
+      },
+      {
+        "word": "pop",
+        "digits": [
+          9,
+          9
+        ]
+      }
+    ],
+    "adjective": [
+      {
+        "word": "sissy",
+        "digits": [
+          0,
+          0
+        ]
+      },
+      {
+        "word": "sad",
+        "digits": [
+          0,
+          1
+        ]
+      },
+      {
+        "word": "snowy",
+        "digits": [
+          0,
+          2
+        ]
+      },
+      {
+        "word": "awesome",
+        "digits": [
+          0,
+          3
+        ]
+      },
+      {
+        "word": "sorry",
+        "digits": [
+          0,
+          4
+        ]
+      },
+      {
+        "word": "slow",
+        "digits": [
+          0,
+          5
+        ]
+      },
+      {
+        "word": "swishy",
+        "digits": [
+          0,
+          6
+        ]
+      },
+      {
+        "word": "sick",
+        "digits": [
+          0,
+          7
+        ]
+      },
+      {
+        "word": "savvy",
+        "digits": [
+          0,
+          8
+        ]
+      },
+      {
+        "word": "sappy",
+        "digits": [
+          0,
+          9
+        ]
+      },
+      {
+        "word": "dizzy",
+        "digits": [
+          1,
+          0
+        ]
+      },
+      {
+        "word": "tight",
+        "digits": [
+          1,
+          1
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "wooden",
+        "digits": [
+          1,
+          2
+        ]
+      },
+      {
+        "word": "tame",
+        "digits": [
+          1,
+          3
+        ]
+      },
+      {
+        "word": "dry",
+        "digits": [
+          1,
+          4
+        ]
+      },
+      {
+        "word": "tall",
+        "digits": [
+          1,
+          5
+        ]
+      },
+      {
+        "word": "whitish",
+        "digits": [
+          1,
+          6
+        ]
+      },
+      {
+        "word": "thick",
+        "digits": [
+          1,
+          7
+        ]
+      },
+      {
+        "word": "deaf",
+        "digits": [
+          1,
+          8
+        ]
+      },
+      {
+        "word": "deep",
+        "digits": [
+          1,
+          9
+        ]
+      },
+      {
+        "word": "noisy",
+        "digits": [
+          2,
+          0
+        ]
+      },
+      {
+        "word": "neat",
+        "digits": [
+          2,
+          1
+        ]
+      },
+      {
+        "word": "neon",
+        "digits": [
+          2,
+          2
+        ]
+      },
+      {
+        "word": "numb",
+        "digits": [
+          2,
+          3
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "narrow",
+        "digits": [
+          2,
+          4
+        ]
+      },
+      {
+        "word": "annual",
+        "digits": [
+          2,
+          5
+        ]
+      },
+      {
+        "word": "nudgy",
+        "digits": [
+          2,
+          6
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "naggy",
+        "digits": [
+          2,
+          7
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "naive",
+        "digits": [
+          2,
+          8
+        ]
+      },
+      {
+        "word": "wannabe",
+        "digits": [
+          2,
+          9
+        ]
+      },
+      {
+        "word": "messy",
+        "digits": [
+          3,
+          0
+        ]
+      },
+      {
+        "word": "mute",
+        "digits": [
+          3,
+          1
+        ]
+      },
+      {
+        "word": "mean",
+        "digits": [
+          3,
+          2
+        ]
+      },
+      {
+        "word": "mum",
+        "digits": [
+          3,
+          3
+        ]
+      },
+      {
+        "word": "merry",
+        "digits": [
+          3,
+          4
+        ]
+      },
+      {
+        "word": "male",
+        "digits": [
+          3,
+          5
+        ]
+      },
+      {
+        "word": "mushy",
+        "digits": [
+          3,
+          6
+        ]
+      },
+      {
+        "word": "mucky",
+        "digits": [
+          3,
+          7
+        ]
+      },
+      {
+        "word": "mauve",
+        "digits": [
+          3,
+          8
+        ]
+      },
+      {
+        "word": "wimpy",
+        "digits": [
+          3,
+          9
+        ]
+      },
+      {
+        "word": "rosy",
+        "digits": [
+          4,
+          0
+        ]
+      },
+      {
+        "word": "ready",
+        "digits": [
+          4,
+          1
+        ]
+      },
+      {
+        "word": "runny",
+        "digits": [
+          4,
+          2
+        ]
+      },
+      {
+        "word": "haram",
+        "digits": [
+          4,
+          3
+        ]
+      },
+      {
+        "word": "rare",
+        "digits": [
+          4,
+          4
+        ]
+      },
+      {
+        "word": "royal",
+        "digits": [
+          4,
+          5
+        ]
+      },
+      {
+        "word": "rich",
+        "digits": [
+          4,
+          6
+        ]
+      },
+      {
+        "word": "rocky",
+        "digits": [
+          4,
+          7
+        ]
+      },
+      {
+        "word": "rough",
+        "digits": [
+          4,
+          8
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "ripe",
+        "digits": [
+          4,
+          9
+        ]
+      },
+      {
+        "word": "lazy",
+        "digits": [
+          5,
+          0
+        ]
+      },
+      {
+        "word": "elite",
+        "digits": [
+          5,
+          1
+        ]
+      },
+      {
+        "word": "alien",
+        "digits": [
+          5,
+          2
+        ]
+      },
+      {
+        "word": "lame",
+        "digits": [
+          5,
+          3
+        ]
+      },
+      {
+        "word": "leery",
+        "digits": [
+          5,
+          4
+        ]
+      },
+      {
+        "word": "loyal",
+        "digits": [
+          5,
+          5
+        ]
+      },
+      {
+        "word": "lush",
+        "digits": [
+          5,
+          6
+        ]
+      },
+      {
+        "word": "lucky",
+        "digits": [
+          5,
+          7
+        ]
+      },
+      {
+        "word": "leafy",
+        "digits": [
+          5,
+          8
+        ]
+      },
+      {
+        "word": "loopy",
+        "digits": [
+          5,
+          9
+        ]
+      },
+      {
+        "word": "choosy",
+        "digits": [
+          6,
+          0
+        ]
+      },
+      {
+        "word": "chatty",
+        "digits": [
+          6,
+          1
+        ]
+      },
+      {
+        "word": "shiny",
+        "digits": [
+          6,
+          2
+        ]
+      },
+      {
+        "word": "sham",
+        "digits": [
+          6,
+          3
+        ]
+      },
+      {
+        "word": "cherry",
+        "digits": [
+          6,
+          4
+        ]
+      },
+      {
+        "word": "jolly",
+        "digits": [
+          6,
+          5
+        ]
+      },
+      {
+        "word": "jewish",
+        "digits": [
+          6,
+          6
+        ]
+      },
+      {
+        "word": "shaky",
+        "digits": [
+          6,
+          7
+        ]
+      },
+      {
+        "word": "chief",
+        "digits": [
+          6,
+          8
+        ]
+      },
+      {
+        "word": "cheap",
+        "digits": [
+          6,
+          9
+        ]
+      },
+      {
+        "word": "cozy",
+        "digits": [
+          7,
+          0
+        ]
+      },
+      {
+        "word": "good",
+        "digits": [
+          7,
+          1
+        ]
+      },
+      {
+        "word": "keen",
+        "digits": [
+          7,
+          2
+        ]
+      },
+      {
+        "word": "gummy",
+        "digits": [
+          7,
+          3
+        ]
+      },
+      {
+        "word": "grey",
+        "digits": [
+          7,
+          4
+        ]
+      },
+      {
+        "word": "cool",
+        "digits": [
+          7,
+          5
+        ]
+      },
+      {
+        "word": "catchy",
+        "digits": [
+          7,
+          6
+        ]
+      },
+      {
+        "word": "quick",
+        "digits": [
+          7,
+          7
+        ]
+      },
+      {
+        "word": "goofy",
+        "digits": [
+          7,
+          8
+        ]
+      },
+      {
+        "word": "agape",
+        "digits": [
+          7,
+          9
+        ]
+      },
+      {
+        "word": "fussy",
+        "digits": [
+          8,
+          0
+        ]
+      },
+      {
+        "word": "fat",
+        "digits": [
+          8,
+          1
+        ]
+      },
+      {
+        "word": "funny",
+        "digits": [
+          8,
+          2
+        ]
+      },
+      {
+        "word": "foamy",
+        "digits": [
+          8,
+          3
+        ]
+      },
+      {
+        "word": "furry",
+        "digits": [
+          8,
+          4
+        ]
+      },
+      {
+        "word": "foul",
+        "digits": [
+          8,
+          5
+        ]
+      },
+      {
+        "word": "fishy",
+        "digits": [
+          8,
+          6
+        ]
+      },
+      {
+        "word": "foggy",
+        "digits": [
+          8,
+          7
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "fave",
+        "digits": [
+          8,
+          8
+        ]
+      },
+      {
+        "word": "fab",
+        "digits": [
+          8,
+          9
+        ]
+      },
+      {
+        "word": "busy",
+        "digits": [
+          9,
+          0
+        ]
+      },
+      {
+        "word": "bad",
+        "digits": [
+          9,
+          1
+        ]
+      },
+      {
+        "word": "bony",
+        "digits": [
+          9,
+          2
+        ]
+      },
+      {
+        "word": "balmy",
+        "digits": [
+          9,
+          3
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "pro",
+        "digits": [
+          9,
+          4
+        ]
+      },
+      {
+        "word": "blue",
+        "digits": [
+          9,
+          5
+        ]
+      },
+      {
+        "word": "bushy",
+        "digits": [
+          9,
+          6
+        ]
+      },
+      {
+        "word": "back",
+        "digits": [
+          9,
+          7
+        ]
+      },
+      {
+        "word": "puffy",
+        "digits": [
+          9,
+          8
+        ]
+      },
+      {
+        "word": "baby",
+        "digits": [
+          9,
+          9
+        ]
+      }
+    ],
+    "noun": [
+      {
+        "word": "sauce",
+        "digits": [
+          0,
+          0
+        ]
+      },
+      {
+        "word": "seed",
+        "digits": [
+          0,
+          1
+        ]
+      },
+      {
+        "word": "sun",
+        "digits": [
+          0,
+          2
+        ]
+      },
+      {
+        "word": "sumo",
+        "digits": [
+          0,
+          3
+        ]
+      },
+      {
+        "word": "sierra",
+        "digits": [
+          0,
+          4
+        ]
+      },
+      {
+        "word": "soil",
+        "digits": [
+          0,
+          5
+        ]
+      },
+      {
+        "word": "sewage",
+        "digits": [
+          0,
+          6
+        ]
+      },
+      {
+        "word": "sky",
+        "digits": [
+          0,
+          7
+        ]
+      },
+      {
+        "word": "sofa",
+        "digits": [
+          0,
+          8
+        ]
+      },
+      {
+        "word": "soap",
+        "digits": [
+          0,
+          9
+        ]
+      },
+      {
+        "word": "daisy",
+        "digits": [
+          1,
+          0
+        ]
+      },
+      {
+        "word": "tattoo",
+        "digits": [
+          1,
+          1
+        ]
+      },
+      {
+        "word": "tuna",
+        "digits": [
+          1,
+          2
+        ]
+      },
+      {
+        "word": "dome",
+        "digits": [
+          1,
+          3
+        ]
+      },
+      {
+        "word": "diary",
+        "digits": [
+          1,
+          4
+        ]
+      },
+      {
+        "word": "tail",
+        "digits": [
+          1,
+          5
+        ]
+      },
+      {
+        "word": "dish",
+        "digits": [
+          1,
+          6
+        ]
+      },
+      {
+        "word": "dog",
+        "digits": [
+          1,
+          7
+        ]
+      },
+      {
+        "word": "dove",
+        "digits": [
+          1,
+          8
+        ]
+      },
+      {
+        "word": "tuba",
+        "digits": [
+          1,
+          9
+        ]
+      },
+      {
+        "word": "nose",
+        "digits": [
+          2,
+          0
+        ]
+      },
+      {
+        "word": "net",
+        "digits": [
+          2,
+          1
+        ]
+      },
+      {
+        "word": "onion",
+        "digits": [
+          2,
+          2
+        ]
+      },
+      {
+        "word": "enemy",
+        "digits": [
+          2,
+          3
+        ]
+      },
+      {
+        "word": "winery",
+        "digits": [
+          2,
+          4
+        ]
+      },
+      {
+        "word": "nail",
+        "digits": [
+          2,
+          5
+        ]
+      },
+      {
+        "word": "nacho",
+        "digits": [
+          2,
+          6
+        ]
+      },
+      {
+        "word": "neck",
+        "digits": [
+          2,
+          7
+        ]
+      },
+      {
+        "word": "knife",
+        "digits": [
+          2,
+          8
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "honeybee",
+        "digits": [
+          2,
+          9
+        ]
+      },
+      {
+        "word": "mouse",
+        "digits": [
+          3,
+          0
+        ]
+      },
+      {
+        "word": "meadow",
+        "digits": [
+          3,
+          1
+        ]
+      },
+      {
+        "word": "moon",
+        "digits": [
+          3,
+          2
+        ]
+      },
+      {
+        "word": "mummy",
+        "digits": [
+          3,
+          3
+        ]
+      },
+      {
+        "word": "emery",
+        "digits": [
+          3,
+          4
+        ]
+      },
+      {
+        "word": "mole",
+        "digits": [
+          3,
+          5
+        ]
+      },
+      {
+        "word": "match",
+        "digits": [
+          3,
+          6
+        ]
+      },
+      {
+        "word": "mug",
+        "digits": [
+          3,
+          7
+        ]
+      },
+      {
+        "word": "movie",
+        "digits": [
+          3,
+          8
+        ]
+      },
+      {
+        "word": "map",
+        "digits": [
+          3,
+          9
+        ]
+      },
+      {
+        "word": "rice",
+        "digits": [
+          4,
+          0
+        ]
+      },
+      {
+        "word": "road",
+        "digits": [
+          4,
+          1
+        ]
+      },
+      {
+        "word": "rain",
+        "digits": [
+          4,
+          2
+        ]
+      },
+      {
+        "word": "rum",
+        "digits": [
+          4,
+          3
+        ]
+      },
+      {
+        "word": "aurora",
+        "digits": [
+          4,
+          4
+        ]
+      },
+      {
+        "word": "railway",
+        "digits": [
+          4,
+          5
+        ]
+      },
+      {
+        "word": "roach",
+        "digits": [
+          4,
+          6
+        ]
+      },
+      {
+        "word": "rag",
+        "digits": [
+          4,
+          7
+        ]
+      },
+      {
+        "word": "roof",
+        "digits": [
+          4,
+          8
+        ]
+      },
+      {
+        "word": "rope",
+        "digits": [
+          4,
+          9
+        ]
+      },
+      {
+        "word": "louse",
+        "digits": [
+          5,
+          0
+        ]
+      },
+      {
+        "word": "lady",
+        "digits": [
+          5,
+          1
+        ]
+      },
+      {
+        "word": "lion",
+        "digits": [
+          5,
+          2
+        ]
+      },
+      {
+        "word": "lime",
+        "digits": [
+          5,
+          3
+        ]
+      },
+      {
+        "word": "lorry",
+        "digits": [
+          5,
+          4
+        ]
+      },
+      {
+        "word": "lily",
+        "digits": [
+          5,
+          5
+        ]
+      },
+      {
+        "word": "leech",
+        "digits": [
+          5,
+          6
+        ]
+      },
+      {
+        "word": "leg",
+        "digits": [
+          5,
+          7
+        ]
+      },
+      {
+        "word": "lava",
+        "digits": [
+          5,
+          8
+        ]
+      },
+      {
+        "word": "lip",
+        "digits": [
+          5,
+          9
+        ]
+      },
+      {
+        "word": "cheese",
+        "digits": [
+          6,
+          0
+        ]
+      },
+      {
+        "word": "cheetah",
+        "digits": [
+          6,
+          1
+        ]
+      },
+      {
+        "word": "chin",
+        "digits": [
+          6,
+          2
+        ]
+      },
+      {
+        "word": "gem",
+        "digits": [
+          6,
+          3
+        ]
+      },
+      {
+        "word": "shrew",
+        "digits": [
+          6,
+          4
+        ]
+      },
+      {
+        "word": "chilli",
+        "digits": [
+          6,
+          5
+        ]
+      },
+      {
+        "word": "chacha",
+        "digits": [
+          6,
+          6
+        ]
+      },
+      {
+        "word": "chick",
+        "digits": [
+          6,
+          7
+        ]
+      },
+      {
+        "word": "chef",
+        "digits": [
+          6,
+          8
+        ]
+      },
+      {
+        "word": "jeep",
+        "digits": [
+          6,
+          9
+        ]
+      },
+      {
+        "word": "goose",
+        "digits": [
+          7,
+          0
+        ]
+      },
+      {
+        "word": "cat",
+        "digits": [
+          7,
+          1
+        ]
+      },
+      {
+        "word": "coin",
+        "digits": [
+          7,
+          2
+        ]
+      },
+      {
+        "word": "game",
+        "digits": [
+          7,
+          3
+        ]
+      },
+      {
+        "word": "crow",
+        "digits": [
+          7,
+          4
+        ]
+      },
+      {
+        "word": "clay",
+        "digits": [
+          7,
+          5
+        ]
+      },
+      {
+        "word": "cage",
+        "digits": [
+          7,
+          6
+        ]
+      },
+      {
+        "word": "cake",
+        "digits": [
+          7,
+          7
+        ]
+      },
+      {
+        "word": "cave",
+        "digits": [
+          7,
+          8
+        ]
+      },
+      {
+        "word": "cube",
+        "digits": [
+          7,
+          9
+        ]
+      },
+      {
+        "word": "vase",
+        "digits": [
+          8,
+          0
+        ]
+      },
+      {
+        "word": "video",
+        "digits": [
+          8,
+          1
+        ]
+      },
+      {
+        "word": "fan",
+        "digits": [
+          8,
+          2
+        ]
+      },
+      {
+        "word": "ovum",
+        "digits": [
+          8,
+          3
+        ]
+      },
+      {
+        "word": "fairy",
+        "digits": [
+          8,
+          4
+        ]
+      },
+      {
+        "word": "fool",
+        "digits": [
+          8,
+          5
+        ]
+      },
+      {
+        "word": "veggie",
+        "digits": [
+          8,
+          6
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "fig",
+        "digits": [
+          8,
+          7
+        ]
+      },
+      {
+        "word": "fife",
+        "digits": [
+          8,
+          8
+        ]
+      },
+      {
+        "word": "vibe",
+        "digits": [
+          8,
+          9
+        ]
+      },
+      {
+        "word": "boss",
+        "digits": [
+          9,
+          0
+        ]
+      },
+      {
+        "word": "bead",
+        "digits": [
+          9,
+          1
+        ]
+      },
+      {
+        "word": "pony",
+        "digits": [
+          9,
+          2
+        ]
+      },
+      {
+        "word": "puma",
+        "digits": [
+          9,
+          3
+        ]
+      },
+      {
+        "word": "berry",
+        "digits": [
+          9,
+          4
+        ]
+      },
+      {
+        "word": "bell",
+        "digits": [
+          9,
+          5
+        ]
+      },
+      {
+        "word": "pouch",
+        "digits": [
+          9,
+          6
+        ]
+      },
+      {
+        "word": "bike",
+        "digits": [
+          9,
+          7
+        ]
+      },
+      {
+        "word": "beef",
+        "digits": [
+          9,
+          8
+        ]
+      },
+      {
+        "word": "pipe",
+        "digits": [
+          9,
+          9
+        ]
+      }
+    ]
+  },
+  "singles": {
+    "verb": [
+      {
+        "word": "sew",
+        "digits": [
+          0
+        ]
+      },
+      {
+        "word": "hate",
+        "digits": [
+          1
+        ]
+      },
+      {
+        "word": "know",
+        "digits": [
+          2
+        ],
+        "phonetic_exception": true
+      },
+      {
+        "word": "aim",
+        "digits": [
+          3
+        ]
+      },
+      {
+        "word": "row",
+        "digits": [
+          4
+        ]
+      },
+      {
+        "word": "heal",
+        "digits": [
+          5
+        ]
+      },
+      {
+        "word": "chew",
+        "digits": [
+          6
+        ]
+      },
+      {
+        "word": "hook",
+        "digits": [
+          7
+        ]
+      },
+      {
+        "word": "view",
+        "digits": [
+          8
+        ]
+      },
+      {
+        "word": "buy",
+        "digits": [
+          9
+        ]
+      }
+    ],
+    "adjective": [
+      {
+        "word": "easy",
+        "digits": [
+          0
+        ]
+      },
+      {
+        "word": "hot",
+        "digits": [
+          1
+        ]
+      },
+      {
+        "word": "new",
+        "digits": [
+          2
+        ]
+      },
+      {
+        "word": "yummy",
+        "digits": [
+          3
+        ]
+      },
+      {
+        "word": "hairy",
+        "digits": [
+          4
+        ]
+      },
+      {
+        "word": "oily",
+        "digits": [
+          5
+        ]
+      },
+      {
+        "word": "itchy",
+        "digits": [
+          6
+        ]
+      },
+      {
+        "word": "gay",
+        "digits": [
+          7
+        ]
+      },
+      {
+        "word": "heavy",
+        "digits": [
+          8
+        ]
+      },
+      {
+        "word": "happy",
+        "digits": [
+          9
+        ]
+      }
+    ],
+    "noun": [
+      {
+        "word": "hose",
+        "digits": [
+          0
+        ]
+      },
+      {
+        "word": "hat",
+        "digits": [
+          1
+        ]
+      },
+      {
+        "word": "hen",
+        "digits": [
+          2
+        ]
+      },
+      {
+        "word": "home",
+        "digits": [
+          3
+        ]
+      },
+      {
+        "word": "arrow",
+        "digits": [
+          4
+        ]
+      },
+      {
+        "word": "whale",
+        "digits": [
+          5
+        ]
+      },
+      {
+        "word": "shoe",
+        "digits": [
+          6
+        ]
+      },
+      {
+        "word": "cow",
+        "digits": [
+          7
+        ]
+      },
+      {
+        "word": "hoof",
+        "digits": [
+          8
+        ]
+      },
+      {
+        "word": "pie",
+        "digits": [
+          9
+        ]
+      }
+    ]
+  }
+}
