@@ -4,6 +4,9 @@ A reversible implementation of the [Mnemonic Major System](https://en.wikipedia.
 Enter a number, get a memorable sentence back — and decode that sentence back into
 the exact original number.
 
+**▶ [Try it in your browser](https://jackhale98.github.io/major_mnemonic-_cli/)** —
+encode, decode, practice and a peg reference, no install needed.
+
 ```
 $ mnemonic 314159265
 Meet ready lip, enjoy heal.
@@ -11,9 +14,6 @@ Meet ready lip, enjoy heal.
 $ mnemonic decode "Meet ready lip, enjoy heal."
 314159265
 ```
-
-**Try it in your browser:** <https://jackhale98.github.io/major_mnemonic-_cli/>
-— encode, decode, practice and a peg reference, running entirely in the browser.
 
 A bare number is shorthand for `encode` — `mnemonic 314159265` and
 `mnemonic encode 314159265` are equivalent.
@@ -129,7 +129,8 @@ python3 -m http.server -d crates/web/dist    # http://localhost:8000
 
 Install [`wasm-opt`](https://github.com/WebAssembly/binaryen) too for a
 smaller module (optional). `.github/workflows/pages.yml` builds the page and
-deploys it on every push to `main`. One-time setup: in the repo's
+deploys it to <https://jackhale98.github.io/major_mnemonic-_cli/> on every
+push to `main`. One-time setup: in the repo's
 **Settings → Pages**, set **Source** to **GitHub Actions**.
 
 ### Regenerating the peg data
