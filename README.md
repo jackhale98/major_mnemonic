@@ -12,6 +12,9 @@ $ mnemonic decode "Meet ready lip, enjoy heal."
 314159265
 ```
 
+**Try it in your browser:** <https://jackhale98.github.io/major_mnemonic-_cli/>
+(the desktop GUI compiled to WebAssembly — no install needed).
+
 A bare number is shorthand for `encode` — `mnemonic 314159265` and
 `mnemonic encode 314159265` are equivalent.
 
@@ -61,8 +64,9 @@ crates/
           peg data. NO UI/CLI/FFI dependencies, so it drops straight into the
           GUI and mobile (UniFFI) front ends.
   cli/    mnemonic            — the `mnemonic` binary (package name `mnemonic`).
-  gui/    mnemonic-gui        — small native desktop GUI (egui/eframe) over core;
-          encodes live as you type, plus a timed training drill.
+  gui/    mnemonic-gui        — small GUI (egui/eframe) over core; encodes live
+          as you type, plus a timed training drill. Builds natively for the
+          desktop and to WebAssembly for the web (GitHub Pages).
 data:     crates/core/data/pegs.v1.json — versioned word data (the source of truth
           for the bijection). Each word stores its `digits`, validated against the
           array index and global word uniqueness (hard gates) and a phonetic
@@ -109,6 +113,20 @@ cargo run -p mnemonic -- encode 1234567890
 cargo run -p mnemonic-gui     # launch the desktop GUI
 ```
 
+### Web version (GitHub Pages)
+
+The same GUI builds for the browser with [Trunk](https://trunkrs.dev):
+
+```
+rustup target add wasm32-unknown-unknown
+cargo install --locked trunk
+cd crates/gui && trunk serve    # http://127.0.0.1:8080, rebuilds on save
+```
+
+`.github/workflows/pages.yml` builds it and deploys it to GitHub Pages on every
+push to `main`. One-time setup: in the repo's **Settings → Pages**, set
+**Source** to **GitHub Actions**.
+
 ### Regenerating the peg data
 
 The word lists in `tools/generate_pegs.py` are the authoritative published pegs
@@ -131,6 +149,7 @@ cargo test -p major_mnemonic_core
 - [x] Authoritative published peg lists (incl. single-digit pegs)
 - [x] Desktop GUI prototype (egui/eframe) over `core` — live encode as you type
 - [x] Training mode (CLI + GUI) — timed, scored peg drills both directions
+- [x] Web version (WebAssembly) deployed to GitHub Pages
 - [ ] Mobile bindings (UniFFI) + iOS/Android shells
 
 ### Known limitation

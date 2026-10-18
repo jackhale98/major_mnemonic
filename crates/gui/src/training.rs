@@ -4,12 +4,14 @@
 //! score. Each sub-view takes ownership of its state and returns the next one,
 //! which keeps the transitions explicit and the borrow checker happy.
 
-use std::time::{Duration, Instant};
+use std::time::Duration;
 
 use eframe::egui;
 use major_mnemonic_core::{Challenge, Direction, RoundOutcome};
 use rand::rngs::StdRng;
 use rand::{Rng, SeedableRng};
+// `std::time::Instant` panics on wasm32; this works on native and web alike.
+use web_time::Instant;
 
 pub struct TrainingView {
     direction: Direction,

@@ -1,4 +1,4 @@
-//! `mnemonic-gui` — a small native desktop front end for the Mnemonic Major
+//! `mnemonic-gui` — a small desktop (and web) front end for the Mnemonic Major
 //! System core. Encode live as you type, or drill yourself in the Train tab.
 
 // Don't pop up a console window alongside the GUI in release builds.
@@ -10,6 +10,7 @@ use eframe::egui;
 
 use training::TrainingView;
 
+#[cfg(not(target_arch = "wasm32"))]
 fn main() -> eframe::Result<()> {
     let native_options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
@@ -23,6 +24,40 @@ fn main() -> eframe::Result<()> {
         native_options,
         Box::new(|_cc| Ok(Box::<MnemonicApp>::default())),
     )
+}
+
+/// Web entry point (built with Trunk; see `index.html`). Mounts the app onto
+/// the `<canvas id="mnemonic_canvas">` in the page.
+#[cfg(target_arch = "wasm32")]
+fn main() {
+    use eframe::wasm_bindgen::JsCast as _;
+
+    wasm_bindgen_futures::spawn_local(async {
+        let document = web_sys::window()
+            .and_then(|w| w.document())
+            .expect("no document");
+        let canvas = document
+            .get_element_by_id("mnemonic_canvas")
+            .expect("missing #mnemonic_canvas")
+            .dyn_into::<web_sys::HtmlCanvasElement>()
+            .expect("#mnemonic_canvas is not a canvas");
+
+        let result = eframe::WebRunner::new()
+            .start(
+                canvas,
+                eframe::WebOptions::default(),
+                Box::new(|_cc| Ok(Box::<MnemonicApp>::default())),
+            )
+            .await;
+
+        // Swap the loading text for an error message if startup failed.
+        if let Some(loading) = document.get_element_by_id("loading") {
+            match result {
+                Ok(()) => loading.remove(),
+                Err(e) => loading.set_inner_html(&format!("Failed to start: {e:?}")),
+            }
+        }
+    });
 }
 
 #[derive(PartialEq, Eq)]
