@@ -1,6 +1,6 @@
 [package]
 name = "mnemonic-gui"
-description = "Lightweight GUI for the Mnemonic Major System (native desktop + web)."
+description = "Lightweight native desktop GUI for the Mnemonic Major System."
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
@@ -15,13 +15,3 @@ path = "src/main.rs"
 major_mnemonic_core = { workspace = true }
 eframe = { workspace = true }
 rand = { workspace = true }
-# `std::time::Instant` panics on wasm32; this is a drop-in that works on both.
-web-time = "1"
-
-# Web build (GitHub Pages via Trunk).
-[target.'cfg(target_arch = "wasm32")'.dependencies]
-# rand's OS entropy source needs the browser's crypto API on wasm32.
-getrandom = { version = "0.2", features = ["js"] }
-wasm-bindgen = "0.2"
-wasm-bindgen-futures = "0.4"
-web-sys = { version = "0.3", features = ["Window", "Document", "Element", "HtmlCanvasElement", "HtmlElement"] }

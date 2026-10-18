@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/core", "crates/cli", "crates/gui"]
+members = ["crates/core", "crates/cli", "crates/gui", "crates/web"]
 
 [workspace.package]
 version = "0.1.0"
@@ -21,6 +21,9 @@ anyhow = "1"
 
 # GUI-only deps (lightweight native immediate-mode UI; no web stack)
 eframe = "0.29"
+
+# Web-only deps (core compiled to WebAssembly for the browser page)
+wasm-bindgen = "0.2"
 
 # Training-mode RNG (front ends only; core stays RNG-free)
 rand = "0.8"

@@ -1,4 +1,4 @@
-name: Deploy web app to GitHub Pages
+name: Deploy web page to GitHub Pages
 
 on:
   push:
@@ -29,23 +29,29 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
 
-      - name: Install Trunk
+      # The wasm-bindgen CLI must match the crate version in Cargo.lock.
+      - name: Install wasm-bindgen and wasm-opt
         run: |
-          curl -sSL https://github.com/trunk-rs/trunk/releases/download/v0.21.14/trunk-x86_64-unknown-linux-gnu.tar.gz \
-            | tar -xz -C /usr/local/bin
+          v="$(crates/web/build.sh --bindgen-version)"
+          mkdir -p "$HOME/.tools"
+          curl -sSfL "https://github.com/wasm-bindgen/wasm-bindgen/releases/download/$v/wasm-bindgen-$v-x86_64-unknown-linux-musl.tar.gz" \
+            | tar -xz -C "$HOME/.tools" --strip-components=1
+          curl -sSfL "https://github.com/WebAssembly/binaryen/releases/download/version_123/binaryen-version_123-x86_64-linux.tar.gz" \
+            | tar -xz -C "$HOME/.tools"
+          echo "$HOME/.tools" >> "$GITHUB_PATH"
+          echo "$HOME/.tools/binaryen-version_123/bin" >> "$GITHUB_PATH"
 
-      - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
+      - name: Test
+        run: cargo test -p major_mnemonic_core -p mnemonic-web
 
-      # Pages serves project sites from /<repo>/, so assets need that prefix.
       - name: Build
-        working-directory: crates/gui
-        run: trunk build --release --public-url "${{ steps.pages.outputs.base_path }}/"
+        run: crates/web/build.sh
+
+      - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: crates/gui/dist
+          path: crates/web/dist
 
   deploy:
     needs: build

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mnemonic — numbers you can remember</title>
+  <meta name="description" content="Turn any number into a memorable sentence with the Major System, and decode it back exactly. Runs entirely in your browser." />
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="Mnemonic — numbers you can remember" />
+  <meta property="og:description" content="Turn any number into a memorable sentence, and back again." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1a17'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-style='italic' font-size='40' text-anchor='middle' fill='%23f6f3ec'%3Em%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="style.css?v=__BUILD__" />
+  <link rel="modulepreload" href="app.js?v=__BUILD__" />
+  <link rel="modulepreload" href="pkg/mnemonic_web.js?v=__BUILD__" />
+  <link rel="preload" href="pkg/mnemonic_web_bg.wasm?v=__BUILD__" as="fetch" type="application/wasm" crossorigin />
+
+  <!-- Apply a saved theme before first paint to avoid a flash. -->
+  <script>
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
+  <script type="module" src="app.js?v=__BUILD__"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <a class="wordmark" href="#encode" aria-label="Mnemonic home">Mnemonic</a>
+      <nav class="tabs" role="tablist" aria-label="Mode">
+        <a role="tab" href="#encode" data-tab="encode">Encode</a>
+        <a role="tab" href="#decode" data-tab="decode">Decode</a>
+        <a role="tab" href="#practice" data-tab="practice">Practice</a>
+        <a role="tab" href="#pegs" data-tab="pegs">Pegs</a>
+      </nav>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/><path class="moon" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+      </button>
+    </header>
+
+    <main>
+      <!-- Encode -->
+      <section class="panel" id="panel-encode" role="tabpanel" data-panel="encode">
+        <p class="lede">Numbers you can <em>remember</em>.</p>
+        <label class="field">
+          <span class="field-label">Your number</span>
+          <input id="enc-input" class="digits-input" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="314159265" aria-describedby="enc-meta" />
+        </label>
+
+        <div class="result" aria-live="polite">
+          <div id="enc-out" class="sentence"></div>
+          <p id="enc-empty" class="hint">Type a number, or try <button class="link" data-example="314159265">π</button>, <button class="link" data-example="8675309">8675309</button> or <button class="link" data-example="1969">a year</button>.</p>
+        </div>
+
+        <div class="toolbar" id="enc-toolbar" hidden>
+          <span id="enc-meta" class="meta"></span>
+          <span class="legend" aria-hidden="true"><i data-pos="verb"></i>verb <i data-pos="adjective"></i>adjective <i data-pos="noun"></i>noun</span>
+          <span class="spacer"></span>
+          <button class="btn ghost" id="enc-copy-link" type="button">Copy link</button>
+          <button class="btn" id="enc-copy" type="button">Copy sentence</button>
+        </div>
+      </section>
+
+      <!-- Decode -->
+      <section class="panel" id="panel-decode" role="tabpanel" data-panel="decode" hidden>
+        <p class="lede">Sentences back to <em>numbers</em>.</p>
+        <label class="field">
+          <span class="field-label">Your sentence</span>
+          <textarea id="dec-input" class="text-input" rows="1" autocomplete="off" spellcheck="false" placeholder="Meet ready lip, enjoy heal."></textarea>
+        </label>
+
+        <div class="result" aria-live="polite">
+          <div id="dec-out" class="number"></div>
+          <div id="dec-words" class="breakdown"></div>
+          <p id="dec-error" class="error" hidden></p>
+          <p id="dec-empty" class="hint">Any peg words decode, in any order — reading order sets the digit order.</p>
+        </div>
+
+        <div class="toolbar" id="dec-toolbar" hidden>
+          <span id="dec-meta" class="meta"></span>
+          <span class="spacer"></span>
+          <button class="btn" id="dec-copy" type="button">Copy number</button>
+        </div>
+      </section>
+
+      <!-- Practice -->
+      <section class="panel" id="panel-practice" role="tabpanel" data-panel="practice" hidden>
+        <div id="prac-setup">
+          <p class="lede">A few minutes a day.</p>
+          <div class="settings">
+            <div class="setting">
+              <span class="field-label">Direction</span>
+              <div class="segmented" role="radiogroup" aria-label="Direction">
+                <button type="button" role="radio" data-dir="to-number" aria-checked="true">Words → number</button>
+                <button type="button" role="radio" data-dir="to-words" aria-checked="false">Number → words</button>
+              </div>
+            </div>
+            <div class="setting">
+              <span class="field-label">Digits per round</span>
+              <div class="stepper" data-key="digits" data-min="1" data-max="12">
+                <button type="button" aria-label="Fewer digits">−</button><output>4</output><button type="button" aria-label="More digits">+</button>
+              </div>
+            </div>
+            <div class="setting">
+              <span class="field-label">Rounds</span>
+              <div class="stepper" data-key="rounds" data-min="1" data-max="50">
+                <button type="button" aria-label="Fewer rounds">−</button><output>10</output><button type="button" aria-label="More rounds">+</button>
+              </div>
+            </div>
+          </div>
+          <p class="hint" id="prac-desc"></p>
+          <button class="btn primary" id="prac-start" type="button">Begin</button>
+        </div>
+
+        <div id="prac-play" hidden>
+          <div class="progress" aria-hidden="true"><span id="prac-bar"></span></div>
+          <div class="play-head">
+            <span id="prac-round" class="meta"></span>
+            <span class="spacer"></span>
+            <span id="prac-clock" class="meta clock">0:00</span>
+            <button class="btn ghost small" id="prac-quit" type="button">End</button>
+          </div>
+          <div id="prac-prompt" class="prompt"></div>
+          <form id="prac-form" class="answer" autocomplete="off">
+            <input id="prac-input" class="text-input" type="text" autocomplete="off" spellcheck="false" />
+            <button class="btn primary" type="submit">Check</button>
+          </form>
+          <p id="prac-feedback" class="feedback" aria-live="polite"></p>
+        </div>
+
+        <div id="prac-done" hidden>
+          <p class="score"><span id="prac-score"></span><span class="of" id="prac-of"></span></p>
+          <p class="meta" id="prac-stats"></p>
+          <ol id="prac-review" class="review"></ol>
+          <div class="toolbar">
+            <button class="btn ghost" id="prac-settings" type="button">Settings</button>
+            <span class="spacer"></span>
+            <button class="btn primary" id="prac-again" type="button">Go again</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pegs -->
+      <section class="panel" id="panel-pegs" role="tabpanel" data-panel="pegs" hidden>
+        <p class="lede">The sounds behind the <em>words</em>.</p>
+        <ol class="sounds" aria-label="Digit sounds">
+          <li><b>0</b>s z</li><li><b>1</b>t d</li><li><b>2</b>n</li><li><b>3</b>m</li><li><b>4</b>r</li>
+          <li><b>5</b>l</li><li><b>6</b>j sh ch</li><li><b>7</b>k g q</li><li><b>8</b>f v</li><li><b>9</b>p b</li>
+        </ol>
+        <p class="hint">Vowels and w, h, y are free — only consonant <em>sounds</em> count. Each pair of digits has a verb, an adjective and a noun; sentences cycle through them.</p>
+        <label class="field compact">
+          <span class="field-label">Find</span>
+          <input id="peg-filter" class="text-input" type="search" placeholder="Digits or a word" autocomplete="off" spellcheck="false" />
+        </label>
+        <div id="peg-grid" class="peg-grid"></div>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <p><span>A reversible <a href="https://en.wikipedia.org/wiki/Mnemonic_major_system">Major System</a>. Runs entirely in your browser.</span>
+        <a href="https://github.com/jackhale98/major_mnemonic-_cli">Source &amp; CLI</a></p>
+    </footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
