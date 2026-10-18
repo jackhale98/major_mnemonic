@@ -1,0 +1,64 @@
+name: Deploy web page to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; let an in-progress deploy finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # rust-toolchain.toml pins the version; add the wasm target to it.
+      - name: Install Rust toolchain
+        run: |
+          rustup show active-toolchain
+          rustup target add wasm32-unknown-unknown
+
+      - uses: Swatinem/rust-cache@v2
+
+      # The wasm-bindgen CLI must match the crate version in Cargo.lock.
+      - name: Install wasm-bindgen and wasm-opt
+        run: |
+          v="$(crates/web/build.sh --bindgen-version)"
+          mkdir -p "$HOME/.tools"
+          curl -sSfL "https://github.com/wasm-bindgen/wasm-bindgen/releases/download/$v/wasm-bindgen-$v-x86_64-unknown-linux-musl.tar.gz" \
+            | tar -xz -C "$HOME/.tools" --strip-components=1
+          curl -sSfL "https://github.com/WebAssembly/binaryen/releases/download/version_123/binaryen-version_123-x86_64-linux.tar.gz" \
+            | tar -xz -C "$HOME/.tools"
+          echo "$HOME/.tools" >> "$GITHUB_PATH"
+          echo "$HOME/.tools/binaryen-version_123/bin" >> "$GITHUB_PATH"
+
+      - name: Test
+        run: cargo test -p major_mnemonic_core -p mnemonic-web
+
+      - name: Build
+        run: crates/web/build.sh
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: crates/web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

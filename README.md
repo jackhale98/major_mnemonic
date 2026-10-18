@@ -4,6 +4,9 @@ A reversible implementation of the [Mnemonic Major System](https://en.wikipedia.
 Enter a number, get a memorable sentence back — and decode that sentence back into
 the exact original number.
 
+**▶ [Try it in your browser](https://jackhale98.github.io/major_mnemonic-_cli/)** —
+encode, decode, practice and a peg reference, no install needed.
+
 ```
 $ mnemonic 314159265
 Meet ready lip, enjoy heal.
@@ -63,6 +66,9 @@ crates/
   cli/    mnemonic            — the `mnemonic` binary (package name `mnemonic`).
   gui/    mnemonic-gui        — small native desktop GUI (egui/eframe) over core;
           encodes live as you type, plus a timed training drill.
+  web/    mnemonic-web        — core compiled to WebAssembly + a hand-written
+          static page (www/) for GitHub Pages. The page never re-implements
+          the encoding: every encode/decode/grade call goes through core.
 data:     crates/core/data/pegs.v1.json — versioned word data (the source of truth
           for the bijection). Each word stores its `digits`, validated against the
           array index and global word uniqueness (hard gates) and a phonetic
@@ -109,6 +115,24 @@ cargo run -p mnemonic -- encode 1234567890
 cargo run -p mnemonic-gui     # launch the desktop GUI
 ```
 
+### Web page (GitHub Pages)
+
+`crates/web` builds a static page: plain HTML/CSS/JS in `crates/web/www/` plus
+the core compiled to a ~70 KB (gzipped) WebAssembly module.
+
+```
+rustup target add wasm32-unknown-unknown
+cargo install wasm-bindgen-cli --version "$(crates/web/build.sh --bindgen-version)"
+crates/web/build.sh                          # outputs crates/web/dist/
+python3 -m http.server -d crates/web/dist    # http://localhost:8000
+```
+
+Install [`wasm-opt`](https://github.com/WebAssembly/binaryen) too for a
+smaller module (optional). `.github/workflows/pages.yml` builds the page and
+deploys it to <https://jackhale98.github.io/major_mnemonic-_cli/> on every
+push to `main`. One-time setup: in the repo's
+**Settings → Pages**, set **Source** to **GitHub Actions**.
+
 ### Regenerating the peg data
 
 The word lists in `tools/generate_pegs.py` are the authoritative published pegs
@@ -131,6 +155,7 @@ cargo test -p major_mnemonic_core
 - [x] Authoritative published peg lists (incl. single-digit pegs)
 - [x] Desktop GUI prototype (egui/eframe) over `core` — live encode as you type
 - [x] Training mode (CLI + GUI) — timed, scored peg drills both directions
+- [x] Web page (core via WebAssembly) on GitHub Pages
 - [ ] Mobile bindings (UniFFI) + iOS/Android shells
 
 ### Known limitation
