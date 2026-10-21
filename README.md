@@ -4,7 +4,7 @@ A reversible implementation of the [Mnemonic Major System](https://en.wikipedia.
 Enter a number, get a memorable sentence back — and decode that sentence back into
 the exact original number.
 
-**▶ [Try it in your browser](https://jackhale98.github.io/major_mnemonic-_cli/)** —
+**▶ [Try it in your browser](https://jackhale98.github.io/major_mnemonic/)** —
 encode, decode, practice and a peg reference, no install needed.
 
 ```
@@ -27,7 +27,7 @@ cargo install mnemonic                  # from crates.io (once published)
 Or install the latest straight from the repo:
 
 ```
-cargo install --git https://github.com/jackhale/major_mnemonic mnemonic
+cargo install --git https://github.com/jackhale98/major_mnemonic mnemonic
 ```
 
 Either way you get a `mnemonic` binary in `~/.cargo/bin`. To install a local
@@ -129,7 +129,7 @@ python3 -m http.server -d crates/web/dist    # http://localhost:8000
 
 Install [`wasm-opt`](https://github.com/WebAssembly/binaryen) too for a
 smaller module (optional). `.github/workflows/pages.yml` builds the page and
-deploys it to <https://jackhale98.github.io/major_mnemonic-_cli/> on every
+deploys it to <https://jackhale98.github.io/major_mnemonic/> on every
 push to `main`. One-time setup: in the repo's
 **Settings → Pages**, set **Source** to **GitHub Actions**.
 
